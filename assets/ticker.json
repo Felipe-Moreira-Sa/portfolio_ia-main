@@ -1,0 +1,234 @@
+[
+    {
+      "name": "Apple Inc.",
+      "ticker": "AAPL",
+      "price": "149.06",
+      "price_future": "155.25",
+      "sector": "Technology"
+    },
+    {
+      "name": "Tesla Inc.",
+      "ticker": "TSLA",
+      "price": "725.32",
+      "price_future": "700.15",
+      "sector": "Automotive"
+    },
+    {
+      "name": "Amazon.com Inc.",
+      "ticker": "AMZN",
+      "price": "3,143.87",
+      "price_future": "3,200.50",
+      "sector": "Retail"
+    },
+    {
+      "name": "Apple Inc.",
+      "ticker": "AAPL",
+      "price": "149.06",
+      "price_future": "155.25",
+      "sector": "Technology"
+    },
+    {
+      "name": "Tesla Inc.",
+      "ticker": "TSLA",
+      "price": "725.32",
+      "price_future": "700.15",
+      "sector": "Automotive"
+    },
+    {
+      "name": "Amazon.com Inc.",
+      "ticker": "AMZN",
+      "price": "3,143.87",
+      "price_future": "3,200.50",
+      "sector": "Retail"
+    },
+    {
+      "name": "Microsoft Corporation",
+      "ticker": "MSFT",
+      "price": "307.10",
+      "price_future": "315.80",
+      "sector": "Technology"
+    },
+    {
+      "name": "Google LLC",
+      "ticker": "GOOGL",
+      "price": "2,531.05",
+      "price_future": "2,600.20",
+      "sector": "Technology"
+    },
+    {
+      "name": "Facebook Inc.",
+      "ticker": "FB",
+      "price": "332.29",
+      "price_future": "340.10",
+      "sector": "Technology"
+    },
+    {
+      "name": "Netflix Inc.",
+      "ticker": "NFLX",
+      "price": "590.78",
+      "price_future": "600.90",
+      "sector": "Technology"
+    },
+    {
+      "name": "Johnson & Johnson",
+      "ticker": "JNJ",
+      "price": "172.45",
+      "price_future": "175.60",
+      "sector": "Healthcare"
+    },
+    {
+      "name": "Pfizer Inc.",
+      "ticker": "PFE",
+      "price": "40.22",
+      "price_future": "41.15",
+      "sector": "Healthcare"
+    },
+    {
+      "name": "General Electric",
+      "ticker": "GE",
+      "price": "13.67",
+      "price_future": "13.80",
+      "sector": "Industrials"
+    },
+    {
+      "name": "Boeing Co.",
+      "ticker": "BA",
+      "price": "217.38",
+      "price_future": "222.50",
+      "sector": "Industrials"
+    },
+    {
+      "name": "Walmart Inc.",
+      "ticker": "WMT",
+      "price": "139.80",
+      "price_future": "142.10",
+      "sector": "Retail"
+    },
+    {
+      "name": "Target Corporation",
+      "ticker": "TGT",
+      "price": "225.56",
+      "price_future": "230.40",
+      "sector": "Retail"
+    },
+    {
+      "name": "The Coca-Cola Company",
+      "ticker": "KO",
+      "price": "54.72",
+      "price_future": "55.80",
+      "sector": "Consumer Staples"
+    },
+    {
+      "name": "Procter & Gamble",
+      "ticker": "PG",
+      "price": "134.25",
+      "price_future": "136.50",
+      "sector": "Consumer Staples"
+    },
+    {
+      "name": "Procter & Gamble",
+      "ticker": "PG",
+      "price": "134.25",
+      "price_future": "136.50",
+      "sector": "Consumer Staples"
+    },
+    {
+      "name": "Johnson Controls",
+      "ticker": "JCI",
+      "price": "69.14",
+      "price_future": "70.80",
+      "sector": "Industrials"
+    },
+    {
+      "name": "Visa Inc.",
+      "ticker": "V",
+      "price": "224.35",
+      "price_future": "230.10",
+      "sector": "Financials"
+    },
+    {
+      "name": "Mastercard Inc.",
+      "ticker": "MA",
+      "price": "367.89",
+      "price_future": "375.50",
+      "sector": "Financials"
+    },
+    {
+      "name": "JPMorgan Chase & Co.",
+      "ticker": "JPM",
+      "price": "161.28",
+      "price_future": "165.40",
+      "sector": "Financials"
+    },
+    {
+      "name": "Goldman Sachs Group",
+      "ticker": "GS",
+      "price": "410.21",
+      "price_future": "415.80",
+      "sector": "Financials"
+    },
+    {
+      "name": "Verizon Communications",
+      "ticker": "VZ",
+      "price": "56.90",
+      "price_future": "57.80",
+      "sector": "Communication Services"
+    },
+    {
+      "name": "AT&T Inc.",
+      "ticker": "T",
+      "price": "29.46",
+      "price_future": "30.10",
+      "sector": "Communication Services"
+    },
+    {
+      "name": "Walt Disney Co.",
+      "ticker": "DIS",
+      "price": "180.22",
+      "price_future": "185.50",
+      "sector": "Communication Services"
+    },
+    {
+      "name": "Exxon Mobil Corporation",
+      "ticker": "XOM",
+      "price": "60.28",
+      "price_future": "61.80",
+      "sector": "Energy"
+    },
+    {
+      "name": "Chevron Corporation",
+      "ticker": "CVX",
+      "price": "104.73",
+      "price_future": "107.50",
+      "sector": "Energy"
+    },
+    {
+      "name": "Royal Dutch Shell",
+      "ticker": "RDS.A",
+      "price": "40.59",
+      "price_future": "41.80",
+      "sector": "Energy"
+    },
+    {
+      "name": "Nestle S.A.",
+      "ticker": "NSRGF",
+      "price": "121.80",
+      "price_future": "125.10",
+      "sector": "Consumer Goods"
+    },
+    {
+      "name": "Unilever N.V.",
+      "ticker": "UN",
+      "price": "56.75",
+      "price_future": "57.90",
+      "sector": "Consumer Goods"
+    },
+    {
+      "name": "Toyota Motor Corporation",
+      "ticker": "TM",
+      "price": "172.38",
+      "price_future": "175.60",
+      "sector": "Automotive"
+    }
+  ]
+  
