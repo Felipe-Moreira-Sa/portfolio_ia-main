@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'dart:convert';
-import 'package:http/http.dart' as http;
-import 'dart:io';
-import 'package:flutter/services.dart' show rootBundle;
 
 import 'package:portfolio/investment.dart';
 
@@ -12,36 +8,36 @@ void main() async {
   // var response =
   //     await http.get(Uri.parse('assets/ticker.json'));
   // var jsonString = response.body;
-//  WidgetsFlutterBinding
-//      .ensureInitialized(); // Certifique-se de inicializar o Flutter
-//  final jsonString = await rootBundle.loadString('assets/ticker.json');
+  //  WidgetsFlutterBinding
+  //      .ensureInitialized(); // Certifique-se de inicializar o Flutter
+  //  final jsonString = await rootBundle.loadString('assets/ticker.json');
 
-  // Passo 2: Converter o conteúdo JSON em uma lista de mapas
-//  List<Map<String, dynamic>> stockData =
-//      List<Map<String, dynamic>>.from(jsonDecode(jsonString));
+    // Passo 2: Converter o conteúdo JSON em uma lista de mapas
+  //  List<Map<String, dynamic>> stockData =
+  //      List<Map<String, dynamic>>.from(jsonDecode(jsonString));
 
-  // Passo 3: Utilizar o dicionário stockData conforme necessário
-//  for (var stock in stockData) {
-//    print(stock['name']);
-//    print(stock['ticker']);
-//    print(stock['price']);
-//    print(stock['price_future']);
-//    print(stock['sector']);
-//    print(stock['percentage']);
-//    print(stock['backgroundColor']);
-//    print('------------------');
-//  }
+    // Passo 3: Utilizar o dicionário stockData conforme necessário
+  //  for (var stock in stockData) {
+  //    print(stock['name']);
+  //    print(stock['ticker']);
+  //    print(stock['price']);
+  //    print(stock['price_future']);
+  //    print(stock['sector']);
+  //    print(stock['percentage']);
+  //    print(stock['backgroundColor']);
+  //    print('------------------');
+  //  }
   // função para ler arquivo json 
   
    runApp(MaterialApp(
      title: "InvestmentPortfolio",
      theme: ThemeData.dark().copyWith(
        // Cor dos ícones
-       iconTheme: IconThemeData(
+       iconTheme: const IconThemeData(
          color: Colors.white, // Cor branca para os ícones
        ),
      // Cor dos textos
-     textTheme: TextTheme(
+     textTheme: const TextTheme(
        bodyLarge: TextStyle(
          color: Colors.white, // Cor branca para textos principais
        ),

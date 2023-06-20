@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'dart:convert';
 
@@ -257,16 +259,42 @@ class _InvestmentPortfolioState extends State<InvestmentPortfolio> {
     return '${percentage.toStringAsFixed(2)}%';
   }
 
-  Map<String, dynamic> readTickerJson(){
-    File file = File('assets/ticker.json');
-    String jsonString = file.readAsStringSync();
-    // Decodifica o JSON em um mapa ou lista
-    var jsonData = json.decode(jsonString);
-    //print(jsonData);
-    return jsonData;
+
+  Widget _buildStockItem(String name, String ticker, String price,
+      String priceFuture, String sector, String percentage) {
+    return Card(
+      child: ListTile(
+        leading: CircleAvatar(
+          child: Text(ticker),
+        ),
+        title: Text(name),
+        subtitle: Text(sector),
+        trailing: Text(
+          percentage,
+          style: TextStyle(
+              color: percentage.contains('-') ? Colors.red : Colors.green),
+        ),
+      ),
+    );
   }
-  print(readTickerJson)
-  
+
+  List<Map<String, dynamic>> stockDataJson = (){
+      // Lê o conteúdo do arquivo JSON
+      String contents = File('assets/tickers.json').readAsStringSync();
+      // Converte o conteúdo para um mapa
+      List<Map<String, dynamic>> json = jsonDecode(contents);
+      return json;
+  }();
+  //adicionar porcentagem no map stockDataJson
+  void addPercentage(){
+    for (var i = 0; i < stockDataJson.length; i++) {
+      stockDataJson[i]['percentage'] = calculatePercentage(stockDataJson[i]);
+    }
+  }
+  //ordena porcentagem
+  void sortPercentage(){
+    stockDataJson.sort((a, b) => a['percentage'].compareTo(b['percentage']));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -277,22 +305,23 @@ class _InvestmentPortfolioState extends State<InvestmentPortfolio> {
             Colors.blueGrey[800], // use a navy blue background color
       ),
       body: ListView.builder(
-        itemCount: stockData.length,
+        itemCount: stockDataJson.length,
         itemBuilder: (context, index) {
           Map<String, dynamic> stock = stockData[index];
-          return _buildStockItem(
-            stock["name"],
-            stock["ticker"],
-            stock["price"],
-            stock["price_future"],
-            stock["sector"],
-            5.0,
+
+          return _buildStockItens(
+            stock['name'],
+            stock['ticker'],
+            stock['price'],
+            stock['price_future'],
+            stock['sector'],
+            stock['percentage'],
             Colors.lightGreen[900]!,
           );
         },
       ),
       bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
+        shape: const CircularNotchedRectangle(),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -339,7 +368,7 @@ class _InvestmentPortfolioState extends State<InvestmentPortfolio> {
     );
   }
 
-  Widget _buildStockItem(
+  Widget _buildStockItens(
     String name,
     String ticket,
     String price,
@@ -349,7 +378,7 @@ class _InvestmentPortfolioState extends State<InvestmentPortfolio> {
     Color backgroundColor,
   ) {
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(8),
@@ -360,31 +389,31 @@ class _InvestmentPortfolioState extends State<InvestmentPortfolio> {
           Row(
             children: [
               // use an icon or image to represent the stock sector
-              Icon(Icons.business_center),
-              SizedBox(width: 16),
+              const Icon(Icons.business_center),
+              const SizedBox(width: 16),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     "$ticket - $price - $price_future",
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Text(
                     sector,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       color: Colors.white,
                     ),
@@ -396,8 +425,8 @@ class _InvestmentPortfolioState extends State<InvestmentPortfolio> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Icon(Icons.bar_chart, color: Colors.white),
-              SizedBox(height: 4),
+              const Icon(Icons.bar_chart, color: Colors.white),
+              const SizedBox(height: 4),
               Text(
                 "${percentage.toStringAsFixed(2)}%",
                 style: const TextStyle(
