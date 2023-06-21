@@ -1,12 +1,5 @@
 [
     {
-      "name": "Apple Inc.",
-      "ticker": "AAPL",
-      "price": "183.79",
-      "price_future": "230.17",
-      "sector": "Technology"
-    },
-    {
       "name": "Tesla Inc.",
       "ticker": "TSLA",
       "price": "257.13",
